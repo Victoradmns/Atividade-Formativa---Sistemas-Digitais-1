@@ -629,8 +629,7 @@ $G_{x,k}$, $n_{x,k}$ e Vida do personagem Yaridovich antes de qualquer
 confronto.
 
 \subsubsection*{Resposta}
-Como o valor máximo possível dos atributos é 127, o maior número decimal
-a ser representado possui três dígitos.
+Como o valor máximo possível de cada um dos atributos é 127, o maior número decimal a ser representado possui três dígitos.
 
 No código BCD cada dígito decimal é representado por 4 bits. Portanto,
 para representar um número de até três dígitos são necessários:
@@ -640,9 +639,7 @@ para representar um número de até três dígitos são necessários:
 \]
 
 Assim, os atributos $G_{x,k}$, $n_{x,k}$ e Vida devem ser representados
-com \textbf{12 bits em BCD}.
-
-Antes de qualquer confronto, o personagem Yaridovich possui:
+com \textbf{12 bits em BCD}. Como antes de qualquer confronto, o personagem Yaridovich possui:
 
 \[
 Vida = 79, \qquad G_{x,k} = 10, \qquad n_{x,k} = 8
@@ -662,7 +659,9 @@ Convertendo para BCD:
 8 = 0000\ 1000
 \]
 
-Cada grupo de 4 bits representa um dígito decimal independente.
+Em que cada grupo de 4 bits representa um dígito decimal independente.
+
+Vale, ressaltar que não é necessário o uso de um bit para guardar o sinal da Vida, pois segundo o própio enunciado ela é limitada a 0 na representação decimal.
 
 \section{Exercício 2 - Eletrônica digital CMOS}
 \begin{tcolorbox}[title=Enunciado da Questão,colback=gray!5,colframe=black]
@@ -692,36 +691,34 @@ Considerando o circuito da Figura 1, responda as questões subsequentes.
 \subsection{Pergunta (a)}
 
 \subsubsection*{Enunciado}
-Qual a expressão lógica do sinal \textit{Saída} em função de
-$\text{Vida[MSB]}(k)$ e 
-$\text{Vida[MSB]}(k+1)$?
+Qual a expressão lógica do sinal "\textit{Saída}" em função de
+"$\text{Vida[MSB]}(k)$" e de
+"$\text{Vida[MSB]}(k+1)$"?
 
 \subsubsection*{Resposta}
 
-A lógica do circuito detecta a transição do bit mais significativo da vida
-de $0$ para $1$, o que indica que o valor da vida tornou-se negativo após a
-jogada.
-
-\textbf{Tabela-verdade}
-
 \begin{table}[H]
+\caption{Tabela-verdade}
 \centering
 \renewcommand{\arraystretch}{1.3}
 \begin{tabular}{|c|c|c|}
-\hline
-$\text{Vida[MSB]}(k)$ & $\text{Vida[MSB]}(k+1)$ & Saída \\
-\hline
-0 & 0 & 0 \\
-0 & 1 & 1 \\
+    \hline
+    $\text{Vida[MSB]}(k)$ & $\text{Vida[MSB]}(k+1)$ & Saída \\
+    \hline
+    0 & 0 & 0 \\
+    0 & 1 & 1 \\
 1 & 0 & 0 \\
 1 & 1 & 0 \\
 \hline
 \end{tabular}
 \end{table}
 
+Como pode-se observar pela tabela verdade, a lógica do circuito serve para sempre detectar a transição do bit mais significativo da vida
+de $0$ para $1$, o que indica que o valor da vida tornou-se negativo após a jogada k, ou seja, tornou-se negativo na jogada (k+1) e, portanto, o personagem morreu em combate em (k+1).
+
 \textbf{Representação lógica equivalente}
 
-A função pode ser implementada utilizando um inversor seguido de uma porta
+A função pode ser implementada utilizando um NOT seguido de um
 AND.
 
 \begin{center}
@@ -743,7 +740,7 @@ AND.
 \end{tikzpicture}
 \end{center}
 
-Assim, a saída deve ser ativada quando:
+O que é compatível com a saída ser ativada quando:
 
 \[
 \text{Vida[MSB]}(k) = 0 \ \ \ e \ \ \ \text{Vida[MSB]}(k+1) = 1
@@ -764,15 +761,15 @@ esse circuito implanta.
 
 \subsubsection*{Resposta}
 
-Como os valores são representados em complemento de dois, o bit mais
-significativo indica o sinal do número. Assim, quando o MSB passa de
-$0$ para $1$, isso significa que o valor da vida tornou-se negativo.
+Como os valores são representados na notação de complemento de dois, o bit mais significativo indica o sinal do número. Assim, quando a VIDA[MSB] passa de $0$ para $1$, isso significa que o valor da vida tornou-se negativo e, portanto, na rodada (k+1).
 
-O circuito, portanto, detecta exatamente essa transição o momento em que a vida do personagem
+Desse jeito, partindo de um ponto em que o personagem o circuito é usado em todas as rodadas de maneira iterada e detecta exatamente essa transição o momento em que a vida do personagem
 passa de um valor não negativo para um valor negativo após a aplicação
 de um golpe e ativa o sinal
 de saída quando ela ocorre, indicando que a condição de derrota foi
 atingida.
+
+Entretanto, por mais que ele consiga indicar sempre quando há a transição e seja condição suficiente para a derrota, ele não é condição necessária. É possível que ao receber um personagem cuja VIDA[MSB](k+1) seja 0, ele acabe retornando 0 como se o personagem ainda estivesse vivo.
 
 \subsection{Pergunta (c)}
 
