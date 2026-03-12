@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.13)  11 MAR 2026 15:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.13)  12 MAR 2026 00:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -761,31 +761,38 @@ Overfull \hbox (6.44112pt too wide) in paragraph at lines 347--347
 [2]
 
 [3]
+Overfull \hbox (6.44112pt too wide) in paragraph at lines 525--525
+ []|[]| 
+ []
+
+
 
 [4]
 
 [5]
-<circuitoEx2.png, id=104, 619.56468pt x 349.305pt>
+
+[6]
+
+[7]
+<circuitoEx2.png, id=113, 619.56468pt x 349.305pt>
 File: circuitoEx2.png Graphic file (type png)
 <use circuitoEx2.png>
-Package pdftex.def Info: circuitoEx2.png  used on input line 503.
+Package pdftex.def Info: circuitoEx2.png  used on input line 687.
 (pdftex.def)             Requested size: 409.71692pt x 230.98972pt.
 
-Overfull \hbox (20.56795pt too wide) in paragraph at lines 511--514
+Overfull \hbox (20.56795pt too wide) in paragraph at lines 695--698
 []\T1/phv/m/n/12 Qual a ex-pres-são ló-gica do si-nal \T1/phv/m/sl/12 Sa-ída \T1/phv/m/n/12 em fun-ção de $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 )$ \T1/phv/m/n/12 e $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 k \OT1/cmr/m/n/12 +
  []
 
 
 
-[6 <./circuitoEx2.png>]
-
-[7]
-
-[8]
+[8 <./circuitoEx2.png>]
 
 [9]
 
-[10] (./main.aux)
+[10]
+
+[11] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
@@ -794,18 +801,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 3ADC4FED6EEEDC4A0FF101D66B5E63B1;2076.
  ) 
 Here is how much of TeX's memory you used:
- 30558 strings out of 467748
- 601945 string characters out of 5431137
- 1029030 words of memory out of 5000000
- 58743 multiletter control sequences out of 15000+600000
+ 30561 strings out of 467748
+ 601989 string characters out of 5431137
+ 1029106 words of memory out of 5000000
+ 58744 multiletter control sequences out of 15000+600000
  663959 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,13n,117p,1251b,740s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (11 pages, 177967 bytes).
+Output written on main.pdf (12 pages, 180382 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 146 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
+ 191 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
  127 words of extra memory for PDF output out of 10000 (max. 10000000)
 

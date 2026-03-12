@@ -347,19 +347,61 @@ Tabela~\ref{tab:batalha} considerando que:
 \end{tabularx}
 \end{table}
 
-Na linha 15, Geno utiliza o golpe ``Hand Gun'' $(G=5)$.
-O cálculo realizado em aritmética binária de 8 bits é:
+\noindent \textbf{Cálculos em cada rodada}
 
-\[
-00000011_2 - 00000101_2 = 11111110_2
-\]
+\begin{itemize}
 
-Em complemento de dois, $11111110_2 = -2_{10}$. Assim,
-$\text{Vida}_{Yaridovich} \le 0$ e Yaridovich é derrotado nessa jogada.
+\item \textbf{Linha 1 – Geno usa ``Geno Blast'' $(G=46)$}: $01001111_2 - 00101110_2 = 00100001_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 2 – Yaridovich usa ``Water Blast'' $(G=27)$}: $01000011_2 - 00011011_2 = 00101000_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 3 – Geno usa ``Hand Gun'' $(G=5)$}: $00100001_2 - 00000101_2 = 00011100_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 4 – Yaridovich usa ``Flame Stone'' $(G=10)$}: $00101000_2 - 00001010_2 = 00011110_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 5 – Geno usa ``Hand Gun'' $(G=5)$}: $00011100_2 - 00000101_2 = 00010111_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 6 – Yaridovich usa ``Flame Stone'' $(G=10)$}: $00011110_2 - 00001010_2 = 00010100_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 7 – Geno usa ``Hand Gun'' $(G=5)$}: $00010111_2 - 00000101_2 = 00010010_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 8 – Yaridovich usa ``Flame Stone'' $(G=10)$}: $00010100_2 - 00001010_2 = 00001010_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 9 – Geno usa ``Hand Gun'' $(G=5)$}: $00010010_2 - 00000101_2 = 00001101_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 10 – Yaridovich usa ``Pierce'' $(G=3)$}: $00001010_2 - 00000011_2 = 00000111_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 11 – Geno usa ``Hand Gun'' $(G=5)$}: $00001101_2 - 00000101_2 = 00001000_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 12 – Yaridovich usa ``Pierce'' $(G=3)$}: $00000111_2 - 00000011_2 = 00000100_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 13 – Geno usa ``Hand Gun'' $(G=5)$}: $00001000_2 - 00000101_2 = 00000011_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 14 – Yaridovich usa ``Pierce'' $(G=3)$}: $00000100_2 - 00000011_2 = 00000001_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 15 – Geno usa ``Hand Gun'' $(G=5)$}: $00000011_2 - 00000101_2 = 11111110_2$
+\vspace{0.1cm}
+
+\end{itemize}
+
+Como foi na linha 15 que o número da vida do Yaridovich ficou com um sinal 1, sua vida foi reduzida para abaixo de zero e ele foi morto em combate.
 
 Portanto, a batalha termina na linha 15 da tabela e as linhas
-seguintes permanecem sem valores de vida, pois o jogo não
-prossegue após a derrota de um personagem.
+seguintes permanecem sem valores de vida, pois o jogo não especifica a continuação após a derrota de um dos personagens.
 
 \subsection{Pergunta (c)}
 \subsubsection*{Enunciado}
@@ -368,15 +410,173 @@ O que ocorreria na batalha se, seguindo a mesma sequência de golpes da Tabela~\
 
 \subsubsection*{Resposta}
 
-Se Yaridovich fosse o primeiro a atacar, mantendo-se a mesma sequência de golpes da Tabela~\ref{tab:batalha}, a ordem das ações seria apenas deslocada: o primeiro ataque seria de Yaridovich, seguido pelo ataque inicial de Geno, e assim sucessivamente.
+\begin{table}[H]
+\small
+\centering
+\caption{Sequência de Jogadas (Yaridovich ataca primeiro)}
+\label{tab:batalha_variante}
 
-No início da batalha, Geno possui 67 pontos de vida e Yaridovich possui 79 pontos de vida. Caso Yaridovich inicie o combate utilizando o golpe ``Water Blast'' $(G=27)$, a vida de Geno seria reduzida imediatamente para 40 pontos.
+\renewcommand{\arraystretch}{1.3}
 
-Em seguida, Geno utilizaria ``Geno Blast'' $(G=46)$, reduzindo a vida de Yaridovich para 33 pontos. A partir desse ponto, a sequência de golpes continua exatamente como descrita na tabela.
+\begin{tabularx}{\textwidth}{
+|>{\centering\arraybackslash}m{0.8cm}
+|>{\centering\arraybackslash}m{5.5cm}
+|>{\centering\arraybackslash}X
+|>{\centering\arraybackslash}X
+|>{\centering\arraybackslash}X
+|>{\centering\arraybackslash}X|}
 
-Entretanto, como Geno passa a receber dano antes de executar seu primeiro ataque, ele sofre um ataque adicional de Yaridovich ao longo da sequência. Considerando que Geno termina a sequência original com apenas 1 ponto de vida, esse ataque extra faria sua vida atingir um valor negativo antes que pudesse realizar o golpe final.
+\hline
+\rowcolor{gray!25}
+ & &
+\textbf{Binário} &
+\textbf{Hex} &
+\textbf{Binário} &
+\textbf{Hex} \\
+\cline{3-6}
 
-Portanto, nessa variante da batalha, Geno seria derrotado primeiro, enquanto Yaridovich ainda permaneceria com vida positiva no momento da derrota do oponente. Assim, inverter a ordem inicial dos ataques altera o resultado final do combate, resultando na vitória de Yaridovich.
+\rowcolor{gray!25}
+\multirow{-2}{*}{\textbf{Linha}} &
+\multirow{-2}{*}{\textbf{Ação}} &
+\multicolumn{2}{c|}{\textbf{Vida Geno}} &
+\multicolumn{2}{c|}{\textbf{Vida Yaridovich}} \\
+\hline
+
+0 & Início da Batalha &
+01000011 & 43 &
+01001111 & 4F \\
+\hline
+
+1 & Yaridovich usa ``Water Blast'' $(G=27)$ &
+00101000 & 28 &
+01001111 & 4F \\
+\hline
+
+2 & Geno usa ``Geno Blast'' $(G=46)$ &
+00101000 & 28 &
+00100001 & 21 \\
+\hline
+
+3 & Yaridovich usa ``Flame Stone'' $(G=10)$ &
+00011110 & 1E &
+00100001 & 21 \\
+\hline
+
+4 & Geno usa ``Hand Gun'' $(G=5)$ &
+00011110 & 1E &
+00011100 & 1C \\
+\hline
+
+5 & Yaridovich usa ``Flame Stone'' $(G=10)$ &
+00010100 & 14 &
+00011100 & 1C \\
+\hline
+
+6 & Geno usa ``Hand Gun'' $(G=5)$ &
+00010100 & 14 &
+00010111 & 17 \\
+\hline
+
+7 & Yaridovich usa ``Flame Stone'' $(G=10)$ &
+00001010 & 0A &
+00010111 & 17 \\
+\hline
+
+8 & Geno usa ``Hand Gun'' $(G=5)$ &
+00001010 & 0A &
+00010010 & 12 \\
+\hline
+
+9 & Yaridovich usa ``Pierce'' $(G=3)$ &
+00000111 & 07 &
+00010010 & 12 \\
+\hline
+
+10 & Geno usa ``Hand Gun'' $(G=5)$ &
+00000111 & 07 &
+00001101 & 0D \\
+\hline
+
+11 & Yaridovich usa ``Pierce'' $(G=3)$ &
+00000100 & 04 &
+00001101 & 0D \\
+\hline
+
+12 & Geno usa ``Hand Gun'' $(G=5)$ &
+00000100 & 04 &
+00001000 & 08 \\
+\hline
+
+13 & Yaridovich usa ``Pierce'' $(G=3)$ &
+00000001 & 01 &
+00001000 & 08 \\
+\hline
+
+14 & Geno usa ``Hand Gun'' $(G=5)$ &
+00000001 & 01 &
+00000011 & 03 \\
+\hline
+
+15 & Yaridovich usa ``Pierce'' $(G=3)$ &
+11111110 & Morto &
+00000011 & 03 \\
+\hline
+
+\end{tabularx}
+\end{table}
+
+\noindent \textbf{Cálculos}
+
+\begin{itemize}
+
+\item \textbf{Linha 1 – Yaridovich usa ``Water Blast'' $(G=27)$}: $01000011_2 - 00011011_2 = 00101000_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 2 – Geno usa ``Geno Blast'' $(G=46)$}: $01001111_2 - 00101110_2 = 00100001_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 3 – Yaridovich usa ``Flame Stone'' $(G=10)$}: $00101000_2 - 00001010_2 = 00011110_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 4 – Geno usa ``Hand Gun'' $(G=5)$}: $00100001_2 - 00000101_2 = 00011100_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 5 – Yaridovich usa ``Flame Stone'' $(G=10)$}: $00011110_2 - 00001010_2 = 00010100_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 6 – Geno usa ``Hand Gun'' $(G=5)$}: $00011100_2 - 00000101_2 = 00010111_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 7 – Yaridovich usa ``Flame Stone'' $(G=10)$}: $00010100_2 - 00001010_2 = 00001010_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 8 – Geno usa ``Hand Gun'' $(G=5)$}: $00010111_2 - 00000101_2 = 00010010_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 9 – Yaridovich usa ``Pierce'' $(G=3)$}: $00001010_2 - 00000011_2 = 00000111_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 10 – Geno usa ``Hand Gun'' $(G=5)$}: $00010010_2 - 00000101_2 = 00001101_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 11 – Yaridovich usa ``Pierce'' $(G=3)$}: $00000111_2 - 00000011_2 = 00000100_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 12 – Geno usa ``Hand Gun'' $(G=5)$}: $00001101_2 - 00000101_2 = 00001000_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 13 – Yaridovich usa ``Pierce'' $(G=3)$}: $00000100_2 - 00000011_2 = 00000001_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 14 – Geno usa ``Hand Gun'' $(G=5)$}: $00001000_2 - 00000101_2 = 00000011_2$
+\vspace{0.1cm}
+
+\item \textbf{Linha 15 – Yaridovich usa ``Pierce'' $(G=3)$}: $00000001_2 - 00000011_2 = 11111110_2$
+\vspace{0.1cm}
+
+\end{itemize}
+
+Assim, dessa vez, ao permitir que Yaridovich gcomece premieiro ele ganha a margem que ele precisava de 1 ponto de vida da tabela anterior para ele e sobrevive, o que causa na morte em combate do Geno.
 
 \subsection{enunciado para (d) e (e)}
 \begin{tcolorbox}[title=Enunciado da Questão,colback=gray!5,colframe=black]
@@ -400,11 +600,8 @@ Em relação ao código BCD e ao seu uso no jogo, responda:
 Quantos bits são necessários para representar um dígito decimal? Por quê?
 
 \subsubsection*{Resposta}
-Para representar um dígito decimal no código BCD são necessários \textbf{4 bits}.
-
-Isso ocorre porque um dígito decimal pode assumir \textbf{10 valores possíveis}
-(0 a 9). Com $n$ bits é possível representar $2^n$ combinações diferentes.
-Assim, precisamos encontrar o menor valor de $n$ tal que:
+Como um dígito decimal pode assumir \textbf{10 valores possíveis}
+(0,1,2,...,8,9) e como $n$ bits representam $2^n$ combinações diferentes, precisamos encontrar o menor valor de $n$ tal que:
 
 \[
 2^n \geq 10
@@ -413,24 +610,11 @@ Assim, precisamos encontrar o menor valor de $n$ tal que:
 Testando os valores:
 
 \[
-2^3 = 8 < 10
-\]
-
-\[
+2^3 = 8 < 10 \ \ \ e \ \ \
 2^4 = 16 \geq 10
 \]
 
 Logo, são necessários \textbf{4 bits} para representar um dígito decimal em BCD.
-Nesse código, cada dígito de 0 a 9 é representado por um grupo de 4 bits.
-Por exemplo:
-
-\[
-0 = 0000 \quad
-5 = 0101 \quad
-9 = 1001
-\]
-
-As combinações restantes (1010 até 1111) não são utilizadas no código BCD.
 
 \subsection{Pergunta (e)}
 
