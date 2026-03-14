@@ -1,6 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1773288374.09362 "c:/Users/victo/Documentos/trabalhos/SistemasDigitais1/AF1/main.tex" "main.pdf" "main" 1773288378.02479 0
-  "c:/Users/victo/Documentos/trabalhos/SistemasDigitais1/AF1/main.tex" 1773288372 26447 3e7ae33cff695773c1aba8a084d25f4a ""
+["pdflatex"] 1773448474.00077 "c:/Users/victo/Documentos/trabalhos/SistemasDigitais1/AF1/main.tex" "main.pdf" "main" 1773448477.64058 0
+  "WhatsApp Image 2026-03-13 at 9.21.17 PM.jpeg" 1773447931 185551 dbbc87bb70bddfe469cd685efa6d3d74 ""
+  "c:/Users/victo/Documentos/trabalhos/SistemasDigitais1/AF1/main.tex" 1773448470 28505 4847af2b60c87399ae17f0cedfa82738 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1760384586 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1760387564 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1760388247 4484 b828043cbd581d289d955903c1339981 ""
@@ -210,9 +211,9 @@
   "c:/texlive/2025/texmf.cnf" 1760405332 713 e69b156964470283e0530f5060668171 ""
   "circuitoEx2.png" 1773284790 26306 9fd073308822ee017986fa85170789f6 ""
   "logo.png" 1773284790 34416 85b0409caaa9c8c96c8db349b30a28b9 ""
-  "main.aux" 1773288377 3022 d1374bc7139386cfea99ddce54fe16b0 "pdflatex"
-  "main.out" 1773288377 2076 3adc4fed6eeedc4a0ff101d66b5e63b1 "pdflatex"
-  "main.tex" 1773288372 26447 3e7ae33cff695773c1aba8a084d25f4a ""
+  "main.aux" 1773448477 3417 4fe196a92752e4854e1bfb512916ffa3 "pdflatex"
+  "main.out" 1773448477 2076 3adc4fed6eeedc4a0ff101d66b5e63b1 "pdflatex"
+  "main.tex" 1773448470 28505 4847af2b60c87399ae17f0cedfa82738 ""
   (generated)
   "main.aux"
   "main.log"

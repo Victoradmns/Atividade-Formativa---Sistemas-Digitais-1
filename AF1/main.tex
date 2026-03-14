@@ -782,16 +782,12 @@ em aberto? Assuma que nenhuma outra falha ocorra ao mesmo tempo.
 \subsubsection*{Resposta}
 
 Se a porta do transistor Q2 ficar em aberto, o seu estado lógico torna-se
-indefinido, pois a tensão no terminal de controle não estará fixada em
-nenhum nível lógico específico.
+indefinido, pois a tensão no terminal não estará fixa em qualquer nível lógico específico. Nesse caso, o transistor pode conduzir ou permanecer desligado de forma
+imprevisível devido a ruídos ou erros.
 
-Nesse caso, o transistor pode conduzir ou permanecer desligado de forma
-imprevisível devido a ruídos elétricos ou acoplamentos parasitas.
-
-Como consequência, o comportamento da primeira etapa lógica do circuito
-torna-se indeterminado, podendo gerar valores incorretos na saída
-intermediária e, consequentemente, ativar ou desativar o sinal de derrota
-de forma errática.
+Logo, o comportamento da primeira etapa lógica do circuito
+torna-se indeterminado, e, consequentemente, ativar ou desativar o sinal de derrota
+de forma extremamente imprevisível. O que acabaria com a funcionalidade do sistema.
 
 \subsection{Pergunta (d)}
 
@@ -804,17 +800,56 @@ tempo que ela.
 
 \subsubsection*{Resposta}
 
-Se ocorrer um curto-circuito entre o dreno e a fonte do transistor Q6,
-o caminho para o terra permanecerá permanentemente conectado.
+Se ocorrer um curto-circuito entre o dreno e a fonte do transistor Q6, o caminho para o terra permanecerá permanentemente conduzindo, ou seja, passará terra para o Q5 e transformará o circuito em um not e tornará o circuito em:
 
-Assim, o nó controlado por esse transistor será forçado ao nível lógico
-baixo independentemente do valor aplicado à sua porta.
+\begin{center}
+\begin{tikzpicture}[circuit logic US, every circuit symbol/.style={scale=1}]
 
-Como consequência, a lógica implementada pelo circuito ficará alterada,
-podendo impedir que o sinal de saída atinja o nível lógico alto mesmo
-quando a condição de derrota for satisfeita, ou causar um comportamento
-incorreto na detecção dessa condição.
+% Entrada horizontal
+\node (A) at (0,0) {$\text{Vida[MSB]}(k)$};
 
+% Entrada superior
+\node (B) at (3,2) {$\text{Vida[MSB]}(k+1)$};
+
+% Bloco CMOS
+\node[draw, minimum width=1cm, minimum height=0.8cm] (cmos) at (3,1) {PMOS};
+
+% Inversor
+\node[not gate, draw] (not1) at (6,0) {};
+
+% Ligações
+\draw (A) -- (5,0);
+\draw (B) -- (cmos);
+\draw (cmos) -- (3,0);
+
+% ligação até inversor
+\draw (5,0) -- (not1.input);
+
+% saída
+\draw (not1.output) -- (8,0) node[right]{Saída};
+
+\end{tikzpicture}
+\end{center}
+
+\begin{table}[H]
+\caption{Tabela-verdade da com erro}
+\centering
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|}
+    \hline
+    $\text{Vida[MSB]}(k)$ & $\text{Vida[MSB]}(k+1)$ & Saída \\
+    \hline
+    0 & 0 & ??? \\
+    0 & 1 & 1 \\
+    1 & 0 & 0 \\
+    1 & 1 & 0 \\
+\hline
+\end{tabular}
+\end{table}
+
+em primeiro ponto, vale ressaltar a incoerência completa do primeiro caso. Se vida(k+1) for 0, então o PMOS conduz e o fio passa a ter tensão V. Entretanto, como vida(k) também é 0, então o fio IDEAL com tensão passa a ser conectado com o terra, o que geraria todos os tipos de erros.
+
+Fora isso, como pode-se observar na tabela verdade, o circuito consegue transmitir os resultados esperados para os outros caso, principalmente o de 0 e 1 que de fato importam para a sua utilização e indicam a derrota. Entretanto, ainda sim ele não mais poderia ser utilizado, devido à possíveis erros que poderiam resultar do fato de não sabermos o que acontece com o caso 0 e 0. 
 
 \subsection{Pergunta (e)}
 
@@ -823,71 +858,60 @@ Qual deve ser a expressão lógica necessária para implantar a segunda parte da
 
 \subsubsection*{Resposta}
 
-A segunda parte da lógica de detecção de derrota deve identificar quando a
-vida do personagem torna-se igual a zero. Considerando uma representação
-binária de $n$ bits
+Primeiro, é importante constatar o problema: O circuito antes mencioncionado é incapaza de discernir quando um personagem de vida positiva fica com vida 0, um número também positivo, e retorna que 0, demonstrando que ele está vivo. Assim, precisa-se de outro circuito que sempre verifique quando o primeiro circuito retornar zero.
+
+A lógica desse circuito começa percebendo-se que um número "positivo" em base dois (no caso de ter o seu algarismo mais significativo zero) pode ser diferente de zero com apensa um 1 em qualquer uma das outras posições de algarismos. Dessa forma, com o algarismo mais sgnificativo já coberto pelo primeiro circuito, o novo circuito precisa ser capaz de analisar todos os algarismos restantes (n-1, n-2, n-3, ..., 1) e verificar se eles são zero, ou seja, se:
 
 \[
-V_{n-1} V_{n-2} \dots V_0
+Vida_{n-1}, Vida_{n-2}, \dots, Vida_1 = 0
 \]
 
-a condição $\text{Vida}=0$ ocorre somente quando todos os bits são iguais a
-zero. Logo, a função lógica correspondente pode ser escrita como:
-
-\[
-Z = \overline{V_{n-1} + V_{n-2} + \dots + V_0}
-\]
-
-Essa função é equivalente a uma porta NOR de $n$ entradas.
+Essa função é equivalente a uma porta NOR de $n-1$ entradas:
 
 \bigskip
-
-\textbf{Esboço do circuito lógico}
 
 \begin{center}
 \begin{tikzpicture}[circuit logic US]
 
 \node (nor) at (3,0) [nor gate, draw, logic gate inputs=nnn] {};
 
-\node (v2) at (0,0.8) {$V_{n-1}$};
-\node (v1) at (0,0) {$V_{n-2}$};
+\node (v2) at (0,0.8) {$Vida_{n-1}$};
+\node (v1) at (0,0) {$Vida_{n-2}$};
 \node (vd) at (0,-0.8) {$\dots$};
-\node (v0) at (0,-1.6) {$V_0$};
+\node (v0) at (0,-1.6) {$Vida_1$};
 
 \draw (v2) -- (nor.input 1);
 \draw (v1) -- (nor.input 2);
 \draw (v0) -- (nor.input 3);
 
-\draw (nor.output) -- (5,0) node[right]{Vida = 0};
+\draw (nor.output) -- (5,0) node[right]{1};
 
 \end{tikzpicture}
 \end{center}
 
 \bigskip
 
-\textbf{Implementação CMOS}
+\noindent \textbf{Implementação CMOS}
 
-Uma porta NOR de $n$ entradas em CMOS é implementada com:
+Uma porta NOR de $n-1$ entradas em CMOS é implementada com:
 
 \begin{itemize}
-\item $n$ transistores PMOS em série na rede de pull-up
-\item $n$ transistores NMOS em paralelo na rede de pull-down
+\item $n-1$ transistores PMOS em série conectados um no outro no fio até a fonte
+\item $n-1$ transistores NMOS em paralelo conectados em cada vida(i) até o circuito com o terra
 \end{itemize}
 
-Assim, a quantidade mínima de transistores necessária é:
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth, angle=90]{WhatsApp Image 2026-03-13 at 9.21.17 PM.jpeg}
+\caption{Circuito de detecção de vida nula.}
+\label{fig:circuito_novo}
+\end{figure}
+
+Assim, a quantidade mínima de transistores necessária, definindo n-1 como o primeiro algarismo significativo que analisaremos e o jogo com 8 bits para a vida é:
 
 \[
-2n
+2(n-1) = 2 \cdot 7 = 14
 \]
 
-Para o caso do exercício, em que a vida é representada com $8$ bits:
-
-\[
-2 \times 8 = 16 \text{ transistores}
-\]
-
-Portanto, a segunda parte da lógica de detecção de derrota pode ser
-implantada com uma porta NOR de $n$ entradas, utilizando $2n$
-transistores em CMOS.
-
+\textbf{Observação importante:} Vale ressaltar que essa resposta com $n-1$ está usando a notação de contagem à partir de 1, mas a contagem à partir de 0 só mudaria o nome das funções e não o resultado final ou a arquitetura do circuito 
 \end{document}
