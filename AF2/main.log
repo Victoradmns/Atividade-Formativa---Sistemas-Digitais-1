@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.13)  14 MAR 2026 19:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.13)  16 MAR 2026 21:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/victo/Documentos/trabalhos/SistemasDigitais1/AF1/main.tex
-(c:/Users/victo/Documentos/trabalhos/SistemasDigitais1/AF1/main.tex
+**c:/Users/victo/Documentos/trabalhos/SistemasDigitais1/AF2/main.tex
+(c:/Users/victo/Documentos/trabalhos/SistemasDigitais1/AF2/main.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
 (c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -561,116 +561,148 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@temp=\box76
 \tcb@temp=\box77
 \tcb@temp=\box78
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/circuits/tikzlibrarycircuits.logic.US.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/circuits/tikzlibrarycircuits.logic.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/circuits/tikzlibrarycircuits.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+) (c:/texlive/2025/texmf-dist/tex/latex/circuitikz/circuitikz.sty
+Package: circuitikz 2025/07/08{} The CircuiTikz circuit drawing package version 1.8.2
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen294
-\pgfdecoratedremainingdistance=\dimen295
-\pgfdecoratedinputsegmentcompleteddistance=\dimen296
-\pgfdecoratedinputsegmentremainingdistance=\dimen297
-\pgf@decorate@distancetomove=\dimen298
-\pgf@decorate@repeatstate=\count342
-\pgfdecorationsegmentamplitude=\dimen299
-\pgfdecorationsegmentlength=\dimen300
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowinset=\dimen294
+\pgfarrowlength=\dimen295
+\pgfarrowwidth=\dimen296
+\pgfarrowlinewidth=\dimen297
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybending.code.tex
+File: tikzlibrarybending.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.code.tex
+File: pgfmodulebending.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (c:/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransformations.code.tex
+File: pgfmodulenonlineartransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgftransformnonlinearflatness=\dimen298
+) (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex
+File: pgflibrarycurvilinear.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@curvilinear@time@a=\dimen299
+\pgf@curvilinear@length@a=\dimen300
+\pgf@curvilinear@length@b=\dimen301
+\pgf@curvilinear@length@c=\dimen302
+\pgf@curvilinear@length@d=\dimen303
 )
-\tikz@lib@dec@box=\box79
-) (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex))
-\tikz@lib@circ@count=\count343
-\tikzcircuitssizeunit=\dimen301
-)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/circuits/pgflibraryshapes.gates.logic.US.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/shapes/circuits/pgflibraryshapes.gates.logic.code.tex))) (c:/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty
+\pgf@arrows@the@rigidity=\dimen304
+)) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex (c:/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)) (c:/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
+\pgf@circ@count@a=\count342
+\pgf@circ@count@b=\count343
+\pgf@circ@count@c=\count344
+\pgf@circ@res@up=\dimen305
+\pgf@circ@res@down=\dimen306
+\pgf@circ@res@zero=\dimen307
+\pgf@circ@res@left=\dimen308
+\pgf@circ@res@right=\dimen309
+\pgf@circ@res@other=\dimen310
+\pgf@circ@res@step=\dimen311
+\pgf@circ@res@temp=\dimen312
+\pgf@circ@Rlen=\dimen313
+\pgf@circ@scaled@Rlen=\dimen314
+\pgfstartlinewidth=\dimen315
+) (c:/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex
+\ctikz@scratchbox=\box79
+) (c:/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex) (c:/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex) (c:/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex) (c:/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex) (c:/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
+\pgf@circ@res@count=\count345
+) (c:/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex) (c:/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex) (c:/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex) (c:/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex
+\pgfcirc@labelshift=\dimen316
+) (c:/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex) (c:/texlive/2025/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex)) (c:/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
  (c:/texlive/2025/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
-\col@sep=\dimen302
+\col@sep=\dimen317
 \ar@mcellbox=\box80
-\extrarowheight=\dimen303
+\extrarowheight=\dimen318
 \NC@list=\toks46
 \extratabsurround=\skip72
 \backup@length=\skip73
 \ar@cellbox=\box81
 )
-\TX@col@width=\dimen304
-\TX@old@table=\dimen305
-\TX@old@col=\dimen306
-\TX@target=\dimen307
-\TX@delta=\dimen308
-\TX@cols=\count344
+\TX@col@width=\dimen319
+\TX@old@table=\dimen320
+\TX@old@col=\dimen321
+\TX@target=\dimen322
+\TX@delta=\dimen323
+\TX@cols=\count346
 \TX@ftn=\toks47
 ) (c:/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen309
-\lightrulewidth=\dimen310
-\cmidrulewidth=\dimen311
-\belowrulesep=\dimen312
-\belowbottomsep=\dimen313
-\aboverulesep=\dimen314
-\abovetopsep=\dimen315
-\cmidrulesep=\dimen316
-\cmidrulekern=\dimen317
-\defaultaddspace=\dimen318
-\@cmidla=\count345
-\@cmidlb=\count346
-\@aboverulesep=\dimen319
-\@belowrulesep=\dimen320
-\@thisruleclass=\count347
-\@lastruleclass=\count348
-\@thisrulewidth=\dimen321
+\heavyrulewidth=\dimen324
+\lightrulewidth=\dimen325
+\cmidrulewidth=\dimen326
+\belowrulesep=\dimen327
+\belowbottomsep=\dimen328
+\aboverulesep=\dimen329
+\abovetopsep=\dimen330
+\cmidrulesep=\dimen331
+\cmidrulekern=\dimen332
+\defaultaddspace=\dimen333
+\@cmidla=\count347
+\@cmidlb=\count348
+\@aboverulesep=\dimen334
+\@belowrulesep=\dimen335
+\@thisruleclass=\count349
+\@lastruleclass=\count350
+\@thisrulewidth=\dimen336
 ) (c:/texlive/2025/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
 \everycr=\toks48
 \minrowclearance=\skip74
-\rownum=\count349
+\rownum=\count351
 ) (c:/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip75
-\multirow@cntb=\count350
+\multirow@cntb=\count352
 \multirow@dima=\skip76
-\bigstrutjot=\dimen322
+\bigstrutjot=\dimen337
 ) (c:/texlive/2025/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 )
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 47.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 46.
  (c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 ) (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count351
+\l__color_backend_stack_int=\count353
 ) (./main.aux
 Package babel Info: 'brazil' activates 'portuges' shorthands.
 (babel)             Reported on input line 8.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
- (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+
+(c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count352
-\scratchdimen=\dimen323
+\scratchcounter=\count354
+\scratchdimen=\dimen338
 \scratchbox=\box82
-\nofMPsegments=\count353
-\nofMParguments=\count354
+\nofMPsegments=\count355
+\nofMParguments=\count356
 \everyMPshowfont=\toks49
-\MPscratchCnt=\count355
-\MPscratchDim=\dimen324
-\MPnumerator=\count356
-\makeMPintoPDFobject=\count357
+\MPscratchCnt=\count357
+\MPscratchDim=\dimen339
+\MPnumerator=\count358
+\makeMPintoPDFobject=\count359
 \everyMPtoPDFconversion=\toks50
 ) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -678,7 +710,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 47.
+Package hyperref Info: Link coloring ON on input line 46.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -721,101 +753,70 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<logo.png, id=59, 225.84375pt x 202.50656pt>
+<logo.png, id=35, 225.84375pt x 202.50656pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 62.
+Package pdftex.def Info: logo.png  used on input line 61.
 (pdftex.def)             Requested size: 182.09486pt x 163.2878pt.
 
 
 [1
 
 {c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc} <./logo.png>]
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 96.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 102.
+<Captura de tela 2026-03-16 154834.png, id=45, 573.64313pt x 281.55188pt>
+File: Captura de tela 2026-03-16 154834.png Graphic file (type png)
+<use Captura de tela 2026-03-16 154834.png>
+Package pdftex.def Info: Captura de tela 2026-03-16 154834.png  used on input line 118.
+(pdftex.def)             Requested size: 211.97308pt x 104.03937pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 134.
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 102.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 134.
  (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 132.
- (c:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1phv.fd
-File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.159 
-       [1]
-Overfull \hbox (6.44112pt too wide) in paragraph at lines 351--351
- []|[]| 
- []
-
-
+l.140 
+       [1 <./Captura de tela 2026-03-16 154834.png>]
 
 [2]
 
 [3]
-Overfull \hbox (6.44112pt too wide) in paragraph at lines 529--529
- []|[]| 
- []
-
-
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 293.
+ (c:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
 
 [4]
 
 [5]
 
-[6]
-
-[7]
-<circuitoEx2.png, id=113, 619.56468pt x 349.305pt>
-File: circuitoEx2.png Graphic file (type png)
-<use circuitoEx2.png>
-Package pdftex.def Info: circuitoEx2.png  used on input line 690.
-(pdftex.def)             Requested size: 409.71692pt x 230.98972pt.
-
-
-[8 <./circuitoEx2.png>]
-
-[9]
-
-[10]
-
-[11]
-<WhatsApp Image 2026-03-13 at 9.21.17 PM.jpeg, id=135, 1332.98pt x 1606.0pt>
-File: WhatsApp Image 2026-03-13 at 9.21.17 PM.jpeg Graphic file (type jpg)
-<use WhatsApp Image 2026-03-13 at 9.21.17 PM.jpeg>
-Package pdftex.def Info: WhatsApp Image 2026-03-13 at 9.21.17 PM.jpeg  used on input line 909.
-(pdftex.def)             Requested size: 227.62206pt x 274.24167pt.
-
-
-[12 <./WhatsApp Image 2026-03-13 at 9.21.17 PM.jpeg>] (./main.aux)
+[6] (./main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3ADC4FED6EEEDC4A0FF101D66B5E63B1;2076.
+(rerunfilecheck)             Checksum: 8491531BDD6757733B862D5136523C8E;1135.
  ) 
 Here is how much of TeX's memory you used:
- 30589 strings out of 467748
- 602655 string characters out of 5431137
- 1029174 words of memory out of 5000000
- 58769 multiletter control sequences out of 15000+600000
- 663959 words of font info for 86 fonts, out of 8000000 for 9000
+ 47935 strings out of 467748
+ 1123036 string characters out of 5431137
+ 1780177 words of memory out of 5000000
+ 76090 multiletter control sequences out of 15000+600000
+ 653775 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,13n,117p,1251b,740s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (13 pages, 368915 bytes).
+ 102i,11n,117p,1251b,879s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on main.pdf (7 pages, 169323 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 156 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 132 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 PDF objects out of 1000 (max. 8388607)
+ 105 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 79 words of extra memory for PDF output out of 10000 (max. 10000000)
 
