@@ -290,25 +290,19 @@ Y = [(\overline{A}\cdot\overline{C})\cdot\overline{D}] + [(\overline{B}\cdot\ove
 Para obter a forma dual, aplica-se o princípio da dualidade da álgebra booleana, segundo o qual:
 
 \begin{itemize}
-    \item cada operação AND ($\cdot$) é substituída por OR ($+$);
-    \item cada operação OR ($+$) é substituída por AND ($\cdot$);
-    \item os complementos permanecem inalterados.
+    \item cada operação AND ($\cdot$) é substituída por OR ($+$), e o contrário;
+    \item cada operação 0 é substituída por 1 na tabela verdade, e o contrário;
+    \item a tabela verdade do resultado é flipada verticalmente;
 \end{itemize}
 
-Assim, a expressão dual torna-se:
+Assim, podemos deduzir a regra conhecida de que s complementos permanecem inalterados e a expressão dual torna-se:
 
 \begin{equation}
 Y_d = [(\overline{A}+\overline{C})+\overline{D}] \cdot [(\overline{B}+\overline{C})+D]
 \label{eq:dual}
 \end{equation}
 
-que pode ser simplificada para:
-
-\begin{equation}
-Y_d = (\overline{A}+\overline{C}+\overline{D})\cdot(\overline{B}+\overline{C}+D)
-\end{equation}
-
-A Figura \ref{fig:circuito_dual} apresenta o circuito correspondente à expressão dual.
+A Figura \ref{fig:circuito_dual} apresenta o circuito correspondente à expressão dual:
 
 \begin{figure}[H]
 \centering
@@ -424,11 +418,11 @@ A & B & C & D & $Y_d$ \\
 Comparando-se com o circuito original, observa-se que a versão dual altera o comportamento lógico da saída:
 
 \begin{itemize}
-    \item no circuito original, a saída é ativada apenas para alguns mintermos específicos;
-    \item no circuito dual, novas combinações de entrada passam a satisfazer a função lógica.
+    \item Primeiro, o circuito sai de active high para active low.
+    \item no circuito original, a saída é ativada apenas para alguns mintermos específicos. Enquanto no circuito dual, novas combinações de entrada passam a satisfazer a função lógic.
 \end{itemize}
 
-Portanto, a versão dual não preserva a mesma função do circuito original, mas mantém a estrutura algébrica correspondente à dualidade booleana.
+Portanto, a versão dual não preserva a função do circuito original, mas mantém a estrutura algébrica correspondente à dualidade da lógica booleana.
 
 \subsection{Pergunta (b)}
 
@@ -440,25 +434,21 @@ Apresente uma versão equivalente do circuito da Figura 1 utilizando somente por
 Partindo da expressão original:
 
 \begin{equation}
-Y = (\overline{A}\cdot\overline{C}\cdot\overline{D}) + (\overline{B}\cdot\overline{C}\cdot D)
+Y = [\overline{A}\cdot\overline{C}\cdot\overline{D}] + [\overline{B}\cdot\overline{C}\cdot D]
 \end{equation}
 
 Aplicando o teorema de De Morgan:
 
 \begin{equation}
-Y = \overline{\overline{(\overline{A}\cdot\overline{C}\cdot\overline{D})}\cdot\overline{(\overline{B}\cdot\overline{C}\cdot D)}}
+Y=
+\overline{
+\overline{((\overline{A}\cdot\overline{C})\cdot\overline{D})}
+\cdot
+\overline{((\overline{B}\cdot\overline{C})\cdot D)}
+}
 \end{equation}
 
-Essa forma permite implementação apenas com portas NAND, utilizando inversores obtidos por:
-
-\[
-\overline{A}=NAND(A,A), \quad
-\overline{B}=NAND(B,B), \quad
-\overline{C}=NAND(C,C), \quad
-\overline{D}=NAND(D,D)
-\]
-
-A Figura \ref{fig:circuito_nand} apresenta o circuito equivalente.
+A Figura \ref{fig:circuito_nand} apresenta o circuito equivalente do circuito da figura \ref{eq:original}.
 
 \begin{figure}[H]
 \centering
@@ -471,68 +461,106 @@ A Figura \ref{fig:circuito_nand} apresenta o circuito equivalente.
 (0,2) node[left] {$C$} -- (1,2)
 (0,0) node[left] {$D$} -- (1,0);
 
-% NAND inversores
+% Inversores com nand iniciais
 \draw
-(1.4,6) node[nand port, scale=0.6] (nandA) {};
+(1.5,6) node[nand port, scale=0.35] (nandA) {}
+(1.5,4) node[nand port, scale=0.35] (nandB) {}
+(1.5,2) node[nand port, scale=0.35] (nandC) {}
+(3.8,0) node[nand port, scale=0.35] (nandD) {};
+
+% Fios que conectam os terminais dos inversores NAND
+% A
 \draw (1,6) |- (nandA.in 1);
 \draw (1,6) |- (nandA.in 2);
-
-\draw
-(1.4,4) node[nand port, scale=0.6] (nandB) {};
+% B
 \draw (1,4) |- (nandB.in 1);
 \draw (1,4) |- (nandB.in 2);
-
-\draw
-(1.4,2) node[nand port, scale=0.6] (nandC) {};
+% C
 \draw (1,2) |- (nandC.in 1);
 \draw (1,2) |- (nandC.in 2);
+% D
+\draw (3.3,0) |- (nandD.in 1);
+\draw (3.3,0) |- (nandD.in 2);
+
+% Fios após inversores
+\draw
+(notA.out) -- (2,6)
+(notB.out) -- (2.2,4)
+(notC.out) -- (2.2,2)
+(1,0) -- (3.15,0)
+(notD.out) -- (4.2,0);
+
+% OR superior esquerda: A' + C'
+\draw
+(3.4,5) node[nand port, scale=0.7] (nandAC) {};
 
 \draw
-(1.4,0) node[nand port, scale=0.6] (nandD) {};
-\draw (1,0) |- (nandD.in 1);
-\draw (1,0) |- (nandD.in 2);
+(2,6) |- (or1.in 1)
+(2,2) |- (or1.in 2);
 
-% NAND X1
+% OR superior direita: (A'+C') + D'
 \draw
-(4,5) node[nand port, scale=0.7] (nand1) {};
-
-\draw
-(nandA.out) -- (2.6,6) |- (nand1.in 1)
-(nandC.out) -- (2.6,2) |- (nand1.in 2);
-
-% NAND X2
-\draw
-(4,2.5) node[nand port, scale=0.7] (nand2) {};
+(5.5,4.8) node[nand port, scale=0.7] (nandBC) {};
 
 \draw
-(nandB.out) -- (2.6,4) |- (nand2.in 1)
-(nandC.out) -- (2.6,2) |- (nand2.in 2);
+(or1.out) -- (or2.in 1)
+(4.2,0) |- (or2.in 2);
 
-% D direto para X2
+% OR inferior esquerda: B' + C'
 \draw
-(1,0) -- (3.2,0) |- (nand2.in 2);
+(3.4,3) node[nand port, scale=0.7] (nandACD) {};
 
-% D invertido para X1
 \draw
-(nandD.out) -- (3.2,0.3) |- (nand1.in 2);
+(2.2,4) |- (or3.in 1)
+(2.2,2) |- (or3.in 2);
+
+% OR inferior direita: (B'+C') + D
+\draw
+(5.5,2.8) node[nand port, scale=0.7] (nandBCD) {};
+
+\draw
+(or3.out) -- (or4.in 1)
+(3,0) |- (or4.in 2);
+
+% inversores nand para corrigir para and
+\draw
+(4,5) node[nand port, scale=0.35] (nandNot1) {}
+(4,3) node[nand port, scale=0.35] (nandNot2) {};
+
+% Fios que conectam os terminais dos inversores NAND
+% Not1
+\draw (3.5,5) |- (nandNot1.in 1);
+\draw (3.5,5) |- (nandNot1.in 2);
+% Not2
+\draw (3.5,3) |- (nandNot2.in 1);
+\draw (3.5,3) |- (nandNot2.in 2);
+
+
+%node indicators 
+\draw
+(3,0) node[fill, circle, inner sep=1.2pt] (nodeD) {}
+(2,2) node[fill, circle, inner sep=1.2pt] (nodeC) {};
 
 % NAND final
 \draw
-(6.5,3.75) node[nand port, scale=0.7] (nandF) {};
+(7.5,3.75) node[nand port, scale=0.7] (and1) {};
+
 
 \draw
-(nand1.out) -- (nandF.in 1)
-(nand2.out) -- (nandF.in 2);
+(or2.out) -- (and1.in 1)
+(or4.out) -- (and1.in 2);
 
 % Saída
 \draw
-(nandF.out) -- (7.5,3.75) node[right] {$Y$};
+(and1.out) -- (8.5,3.75) node[right] {$Y_d$};
 
 \end{circuitikz}
 \caption{Implementação utilizando apenas portas NAND.}
 \label{fig:circuito_nand}
 \end{figure}
 
-Portanto, a função pode ser implementada exclusivamente com portas NAND, explorando o fato de que a porta NAND é universal.
+Algo que vale ser comentado é o fato dos Not's depois dos nands que conectam ABD e BCD estarem no mesmo fio dos necessários para a criação do Or com o Nand final, então eles foram "anulados".
+
+Como qualquer outro desses tipos de circuitos combinatórios, podemos implementá-lo exclusivamente com portas NAND, explorando o fato de que a porta NAND é "universal".
 
 \end{document}

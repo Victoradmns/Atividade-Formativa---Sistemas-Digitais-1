@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1773708684.15547 "c:/Users/victo/Documentos/trabalhos/SistemasDigitais1/AF2/main.tex" "main.pdf" "main" 1773708686.79011 0
+["pdflatex"] 1773807947.75834 "c:/Users/victo/Documentos/trabalhos/SistemasDigitais1/AF2/main.tex" "main.pdf" "main" 1773807951.15042 0
   "Captura de tela 2026-03-16 154834.png" 1773686914 57701 4eb5613fdc7adeeb5e96a95c149a7dc6 ""
-  "c:/Users/victo/Documentos/trabalhos/SistemasDigitais1/AF2/main.tex" 1773708680 15532 44d2f9ecbc3f1e1cceade7b76689f142 ""
+  "c:/Users/victo/Documentos/trabalhos/SistemasDigitais1/AF2/main.tex" 1773807945 16503 ee25b451d77e7ad88df3186e28a08eb7 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1760384586 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1760387564 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1760388247 4484 b828043cbd581d289d955903c1339981 ""
@@ -214,9 +214,9 @@
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1760406592 3629009 c32a233d1933777a6b65773e732c3e7d ""
   "c:/texlive/2025/texmf.cnf" 1760405332 713 e69b156964470283e0530f5060668171 ""
   "logo.png" 1773284790 34416 85b0409caaa9c8c96c8db349b30a28b9 ""
-  "main.aux" 1773708686 2503 1cb737580f15904ea2841cfdfcb7a8ee "pdflatex"
-  "main.out" 1773708686 1135 8491531bdd6757733b862d5136523c8e "pdflatex"
-  "main.tex" 1773708680 15532 44d2f9ecbc3f1e1cceade7b76689f142 ""
+  "main.aux" 1773807950 2503 1cb737580f15904ea2841cfdfcb7a8ee "pdflatex"
+  "main.out" 1773807950 1135 8491531bdd6757733b862d5136523c8e "pdflatex"
+  "main.tex" 1773807945 16503 ee25b451d77e7ad88df3186e28a08eb7 ""
   (generated)
   "main.aux"
   "main.log"
