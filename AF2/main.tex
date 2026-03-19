@@ -55,7 +55,7 @@
 {\large Escola Politécnica da Universidade de São Paulo\par}
 \vspace{1.2em}
 
-{\large \textbf{PCS3115} -- Sistemas Digitais I (2026)\par}
+{\large \textbf{PCS3115} -- Sistemas Digitais II (2026)\par}
 \vspace{5em}
 
 \includegraphics[width=0.4\textwidth]{logo.png}
@@ -434,7 +434,7 @@ Apresente uma versão equivalente do circuito da Figura 1 utilizando somente por
 Partindo da expressão original:
 
 \begin{equation}
-Y = [\overline{A}\cdot\overline{C}\cdot\overline{D}] + [\overline{B}\cdot\overline{C}\cdot D]
+Y = [(\overline{A}\cdot\overline{C}) \cdot \overline{D}] + [(\overline{B}\cdot\overline{C}) \cdot D]
 \end{equation}
 
 Aplicando o teorema de De Morgan:
@@ -442,13 +442,13 @@ Aplicando o teorema de De Morgan:
 \begin{equation}
 Y=
 \overline{
-\overline{((\overline{A}\cdot\overline{C})\cdot\overline{D})}
+\overline{[(\overline{A}\cdot\overline{C})\cdot\overline{D}]}
 \cdot
-\overline{((\overline{B}\cdot\overline{C})\cdot D)}
+\overline{[(\overline{B}\cdot\overline{C})\cdot D]}
 }
 \end{equation}
 
-A Figura \ref{fig:circuito_nand} apresenta o circuito equivalente do circuito da figura \ref{eq:original}.
+A Figura \ref{fig:circuito_nand} apresenta o circuito equivalente do circuito da figura \ref{eq:original}, feita com a fórmula que chegamos usando De Morgan e com o que sabemos de como calcular portas lógicas à partir das portas nand: NOT = Nand com o fio nos dois terminais, AND = NAND -> NOT feito com NAND e OR = Not feito com NAND => NAND, o que culminou no seguinte circuito:
 
 \begin{figure}[H]
 \centering
@@ -482,18 +482,19 @@ A Figura \ref{fig:circuito_nand} apresenta o circuito equivalente do circuito da
 \draw (3.3,0) |- (nandD.in 1);
 \draw (3.3,0) |- (nandD.in 2);
 
-% Fios após inversores
+% Fios após inversores com nand
 \draw
-(notA.out) -- (2,6)
-(notB.out) -- (2.2,4)
-(notC.out) -- (2.2,2)
+(nandA.out) -- (2,6)
+(nandB.out) -- (2.2,4)
+(nandC.out) -- (2.2,2)
 (1,0) -- (3.15,0)
-(notD.out) -- (4.2,0);
+(nandD.out) -- (4.2,0);
 
 % OR superior esquerda: A' + C'
 \draw
 (3.4,5) node[nand port, scale=0.7] (nandAC) {};
 
+%conexão segunda parte dos fios com nand até os nands principais inciciais
 \draw
 (2,6) |- (or1.in 1)
 (2,2) |- (or1.in 2);
@@ -503,7 +504,7 @@ A Figura \ref{fig:circuito_nand} apresenta o circuito equivalente do circuito da
 (5.5,4.8) node[nand port, scale=0.7] (nandBC) {};
 
 \draw
-(or1.out) -- (or2.in 1)
+(4,5) -- (4.7,5)
 (4.2,0) |- (or2.in 2);
 
 % OR inferior esquerda: B' + C'
@@ -519,7 +520,7 @@ A Figura \ref{fig:circuito_nand} apresenta o circuito equivalente do circuito da
 (5.5,2.8) node[nand port, scale=0.7] (nandBCD) {};
 
 \draw
-(or3.out) -- (or4.in 1)
+(4,3) -- (4.7,3)
 (3,0) |- (or4.in 2);
 
 % inversores nand para corrigir para and
@@ -561,6 +562,6 @@ A Figura \ref{fig:circuito_nand} apresenta o circuito equivalente do circuito da
 
 Algo que vale ser comentado é o fato dos Not's depois dos nands que conectam ABD e BCD estarem no mesmo fio dos necessários para a criação do Or com o Nand final, então eles foram "anulados".
 
-Como qualquer outro desses tipos de circuitos combinatórios, podemos implementá-lo exclusivamente com portas NAND, explorando o fato de que a porta NAND é "universal".
+Temos, logo, mais um exemplo para aomo qualquer outro desses tipos de circuitos combinatórios, podemos implementá-lo exclusivamente com portas NAND, explorando o fato da porta nand ser "universal".
 
 \end{document}
